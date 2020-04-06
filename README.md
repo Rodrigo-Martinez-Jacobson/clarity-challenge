@@ -6,8 +6,8 @@ This is my solution proposal of the code challenge for the Data Engineer positio
 
 Following the document requirements, I develop two applications in Java:
 
-* *listhosts* is my approach to solve the first requirement: `Parse the data with a time_init, time_end`
-* *unlimitedinputparser* is my approach to handle the second requirement: `Unlimited Input Parser`
+* *listhosts* is my approach to solve the first requirement: `Parse the data with a time_init, time_end`.
+* *unlimitedinputparser* is my approach to handle the second requirement: `Unlimited Input Parser`.
 
 To be able to test the second requirement, I created a tool that generates log lines following the structure of the logfile that I've got with the challenge document.
 
@@ -15,15 +15,15 @@ To be able to test the second requirement, I created a tool that generates log l
 
 ### Prerequisites
 
-* Java 11 or higher is installed
+* Java 11 or higher is installed.
 
 ### Project structure
 
 The project is a gradle multi-project that contains three subprojects:
 
-* `listhosts` folder contains the source code for the tool that given the name of a file (with the format described above), an init_datetime, an end_datetime, and a Hostname, returns a list of hostnames connected to the given host during the given period
+* `listhosts` folder contains the source code for the tool that given the name of a file (with the format described above), an init_datetime, an end_datetime, and a Hostname, returns a list of hostnames connected to the given host during the given period.
 * `unlimitedinputparser` folder contains the source code for the tool that can both parse previously written log files and terminate or collect input from a new log file while it's being written and run indefinitely.
-* `loggenerator` contains the tool that can generate log lines indefinitely
+* `loggenerator` contains the tool that can generate log lines indefinitely.
 
 ### How to build
 
@@ -31,7 +31,7 @@ The binaries can be generated using the gradle wrapper:
 
     ./gradlew clean build
 
-This will generate a jar file inside each subproject, in the following path
+This will generate a jar file inside each subproject, in the following path:
 
     ./build/libs/
 
@@ -39,7 +39,7 @@ This will generate a jar file inside each subproject, in the following path
 
 ### Parse the data with a time_init, time_end
 
-After the tool finishes parsing the log, it'll print a list of a list of hostnames connected to the given host during the given period
+After the tool finishes parsing the log, it'll print a list of a list of hostnames connected to the given host during the given period.
 
     java -jar ./listhosts/build/libs/listhosts-1.0.jar <FILE> <init_date> <end_date> <hostname>
 
@@ -48,7 +48,7 @@ After the tool finishes parsing the log, it'll print a list of a list of hostnam
 * FILE: The file to be processed.
 * init_date: The datetime that will be used as start datetime of the given period.
 * end_date: The datetime that will be used as the end datetime of the given period.
-* hostname: The hostname to be searched in the log file
+* hostname: The hostname to be searched in the log file.
 
 Example:
 
