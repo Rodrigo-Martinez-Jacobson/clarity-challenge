@@ -18,7 +18,7 @@ public class PrintLog {
     private static void printUsage() {
         System.out.println("List connected hosts");
         System.out.println("Usage:");
-        System.out.println("\tlisthosts <log_file> <init_date> <end_date> <hostname>");
+        System.out.println("\tjava -jar listhosts-1.0.jar <log_file> <init_date> <end_date> <hostname>");
         System.out.println("Parameters: ");
         System.out.println("\tlog_file: File to process");
         System.out.println("\tinit_date: datetime that will be used as start datetime of the given period");

@@ -84,7 +84,7 @@ public class UnlimitedInputParser {
     private static void printUsage() {
         System.out.println("Unlimited input parser");
         System.out.println("Usage to parse a previously written file:");
-        System.out.println("\tjava UnlimitedInputParser.jar <hostname> [filename]");
+        System.out.println("\tjava -jar unlimitedinputparser-1.0.jar <hostname> <filename>");
         System.out.println("Usage to parse a file while it's being written:");
         System.out.println("\ttail -f <filename> | java -jar unlimitedinputparser-1.0.jar <hostname>");
     }
