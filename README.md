@@ -21,9 +21,9 @@ To be able to test the second requirement, I created a tool that generates log l
 
 The project is a gradle multi-project that contains three subprojects:
 
-* listhosts folder contains the source code for the tool that given the name of a file (with the format described above), an init_datetime, an end_datetime, and a Hostname, returns a list of hostnames connected to the given host during the given period
-* unlimitedinputparser folder contains the source code for the tool that can both parse previously written log files and terminate or collect input from a new log file while it's being written and run indefinitely.
-* loggenerator contains the tool that can generate log lines indefinitely
+* `listhosts` folder contains the source code for the tool that given the name of a file (with the format described above), an init_datetime, an end_datetime, and a Hostname, returns a list of hostnames connected to the given host during the given period
+* `unlimitedinputparser` folder contains the source code for the tool that can both parse previously written log files and terminate or collect input from a new log file while it's being written and run indefinitely.
+* `loggenerator` contains the tool that can generate log lines indefinitely
 
 ### How to build
 
@@ -48,7 +48,7 @@ After the tool finishes parsing the log, it'll print a list of a list of hostnam
 * FILE: The file to be processed.
 * init_date: The datetime that will be used as start datetime of the given period.
 * end_date: The datetime that will be used as the end datetime of the given period.
-* hostname: The hostname that is the target host of a connection from the hosts in the result list.
+* hostname: The hostname to be searched in the log file
 
 Example:
 
@@ -69,7 +69,7 @@ In this case, the tool will display the output every hour.
 #### Parameters
 
 * FILE: The file to be processed.
-* hostname: The hostname that is the target host of a connection from the hosts in the result list.
+* hostname: The hostname to be searched in the log file.
 
 Examples:
 * For a previously written log file:
