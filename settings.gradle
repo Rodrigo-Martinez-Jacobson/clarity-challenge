@@ -1,0 +1,6 @@
+rootProject.name = 'clarity-challenge'
+
+include 'listhosts'
+include 'unlimitedinputparser'
+include 'loggenerator'
+

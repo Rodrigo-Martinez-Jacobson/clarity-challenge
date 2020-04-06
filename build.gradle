@@ -1,0 +1,27 @@
+subprojects {
+    apply plugin:'java'
+    group 'org.rodrigomartinez'
+    version '1.0'
+
+    sourceCompatibility = 11
+    targetCompatibility = 11
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.5.2'
+    }
+    test {
+        useJUnitPlatform()
+    }
+
+    jar {
+        manifest {
+            attributes(
+                    'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                    'Main-Class': project.getProperties().get("mainClassName")
+            )
+        }
+    }
+}
+
